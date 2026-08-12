@@ -1,8 +1,9 @@
 .ndpet-form {
-background-color: #f5edfb;
+  background-color: #f5edfb;
 }
 
 .sub-content {
-width: 100%;
-max-width:90%;
+  width: 100%;
+  max-width:90%;
+  margin: auto;
 }
