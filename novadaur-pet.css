@@ -11,7 +11,7 @@
 }
 
 /* Submit Button */
-#engrid .en__submit button {
+.ndpet-form .en__submit button {
   background: var(--ndpet-button-gradient) !important;
   color: #ffffff !important;
   border: none !important;
