@@ -1,3 +1,19 @@
+/* ============================================================
+   NOVADAUR PETITION TEMPLATE STYLES - v11
+   ============================================================ */
+
+:root {
+  --ndpet-primary: #7123a8;
+  --ndpet-accent: #ff5722;
+  --ndpet-bg: #ffffff;
+  --ndpet-form-bg: #f5edfb;
+  --ndpet-text: #1b1b1b;
+  --ndpet-font-heading: 'Capriola', sans-serif;
+  --ndpet-font-body: 'Lexend', sans-serif;
+  --ndpet-button-gradient: linear-gradient(90deg, #7123a8 0%, #ff5722 100%);
+  --ndpet-sticky-bar-bg: rgba(27, 27, 27, 0.88);
+}
+
 .sub-content {
   width: 100%;
   max-width:90%;
