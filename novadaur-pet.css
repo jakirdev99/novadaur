@@ -9,3 +9,17 @@
   padding: 20px 50px;
   border-radius: 15px;
 }
+
+/* Submit Button */
+#engrid .en__submit button {
+  background: var(--ndpet-button-gradient) !important;
+  color: #ffffff !important;
+  border: none !important;
+  border-radius: 10px !important;
+  font-family: var(--ndpet-font-heading) !important;
+  font-size: 18px !important;
+  padding: 14px 0 !important;
+  width: 100% !important;
+  cursor: pointer;
+  margin-top: 10px !important;
+}
