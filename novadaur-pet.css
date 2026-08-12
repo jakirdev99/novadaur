@@ -1,9 +1,11 @@
-.ndpet-form {
-  background-color: #f5edfb;
-}
-
 .sub-content {
   width: 100%;
   max-width:90%;
   margin: auto;
+}
+
+.ndpet-form {
+  background-color: #f5edfb;
+  padding: 20px 50px;
+  border-radius: 15px;
 }
