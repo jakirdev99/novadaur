@@ -98,10 +98,6 @@ header .logo {
 /* ------------------------------------------------------------
    5. FORM INPUTS
    ------------------------------------------------------------ */
-.en__field {
-  margin-bottom: 16px !important;
-}
-
 .en__field__label {
   display: block !important;
   font-size: 14px !important;
