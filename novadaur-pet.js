@@ -1,8 +1,6 @@
 $(document).ready(function () {
   const checkbox = document.getElementById("popup");
-  const formBlock = document.querySelector(
-    ".en__component.en__component.en__component--column.en__component--column--2",
-  );
+  const formBlock = document.querySelector(".ndpet-form");
 
   function toggleFormBlock() {
     if (window.innerWidth < 993) {
