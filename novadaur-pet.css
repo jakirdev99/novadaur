@@ -19,12 +19,12 @@
    max-width:90%;
    margin: auto;
 }
-#main-content .en__component--row--2 en__component--column--1 {
+#main-content .en__component--row--2 .en__component--column--1 {
    width: 64%;
    padding-right: 30px;
 }
 
-#main-content .en__component--row--2 en__component--column--2 {
+#main-content .en__component--row--2 .en__component--column--2 {
    background-color: #f5edfb;
    padding: 30px 50px;
    border-radius: 15px;
@@ -33,7 +33,7 @@
 }
 
 /* Submit Button */
-#main-content .en__component--row--2 en__component--column--2 .en__submit button {
+#main-content .en__component--row--2 .en__component--column--2 .en__submit button {
    background: var(--ndpet-button-gradient) !important;
    color: #ffffff !important;
    border: none !important;
