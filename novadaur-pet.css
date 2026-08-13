@@ -33,7 +33,7 @@
 }
 
 /* Submit Button */
-.ndpet-form .en__submit button {
+#main-content .en__component--row--2 en__component--column--2 .en__submit button {
    background: var(--ndpet-button-gradient) !important;
    color: #ffffff !important;
    border: none !important;
