@@ -351,7 +351,7 @@ label.popup-btn:hover {
     line-height: 16px;
     color: #fff;
   }
-#popup:checked+ .wrapper label.popup-btn span {
+#popup:checked ~ .wrapper label.popup-btn span {
         display: none;
     }
 #main-content .sub-content {
