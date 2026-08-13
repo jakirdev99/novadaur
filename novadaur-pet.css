@@ -24,20 +24,18 @@
    background-color: #f5edfb;
    padding: 30px 50px;
    border-radius: 15px;
-   width: 36%;
-   margin-top: 0;
 }
 
 /* Submit Button */
 #main-content .sub-content .ndpet-form .en__submit button {
-   background: var(--ndpet-button-gradient) !important;
-   color: #ffffff !important;
-   border: none !important;
-   border-radius: 10px !important;
-   font-family: var(--ndpet-font-heading) !important;
-   font-size: 18px !important;
-   padding: 14px 0 !important;
-   width: 100% !important;
+   background: var(--ndpet-button-gradient);
+   color: #ffffff;
+   border: none;
+   border-radius: 10px;
+   font-family: var(--ndpet-font-heading);
+   font-size: 18px;
+   padding: 14px 0;
+   width: 100%;
    cursor: pointer;
-   margin-top: 10px !important;
+   margin-top: 10px;
 }
