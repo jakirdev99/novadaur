@@ -125,8 +125,10 @@ header .logo {
    gap: 5px;
 } */
 .en__field--16721 .en__field__item input[type="checkbox"] {
-   width: 35px;
-   height:18px;
+   display: inline-block;
+   width: 20px;
+   height:20px;
+   margin: 0;
 }
 #main-content .en__component--row--2, .en__field--select, .en__field {
     position: relative;
