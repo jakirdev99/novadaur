@@ -139,17 +139,7 @@ input#popup {
 /* ------------------------------------------------------------
    7. PROGRESS MENU
    ------------------------------------------------------------ */
-#main-content ul.menu li:nth-child(1) a.active-menu:before {
-  background-position: 0px -40px;
-}
-#main-content ul.menu li:nth-child(2) a:before {
-  background-position: -40px -3px;
-}
-#main-content ul.menu li:nth-child(2) a.active-menu:before {
-  background-position: -40px -40px;
-}
 #main-content ul.menu {
-  display: -webkit-flex;
   display: flex;
   gap: 5px;
   margin-bottom: 10px;
@@ -158,53 +148,49 @@ input#popup {
   background: #fff;
 }
 #main-content ul.menu li {
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
   list-style: none;
-  width: 33%;
 }
 #main-content ul.menu li a {
-  display: block;
-  line-height: normal;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: bold;
-  display: flex;
-  flex-direction: column;
-  min-height: 60px;
-  padding: 0 12px;
-  position: relative;
-  color: #000000;
   display: flex;
   justify-content: center;
   flex-direction: column;
   min-height: 50px;
-  padding: 0 12px;
+  padding: 0 12px 0 55px;
   position: relative;
-  font-size: 12px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  padding-left: 55px;
+  color: #000;
   background: #27ae60;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
 }
 #main-content ul.menu li a.active-menu {
-  color: #ffffff;
+  color: #fff;
   background: #f39c12;
 }
 #main-content ul.menu li a:before {
   content: "";
-  display: block;
   width: 30px;
   height: 30px;
-  background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2281/form-tab-icon.png?v=1755754782000)
-    no-repeat;
   position: absolute;
   top: 10px;
   left: 14px;
-  background-size: 110px;
-  -webkit-transition: all 0.4s ease;
-  transition: all 0.4s ease;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+/* Icons */
+#main-content ul.menu li:nth-child(1) a:before {
+  background-image: url("writing-black.png");
+}
+#main-content ul.menu li:nth-child(1) a.active-menu:before {
+  background-image: url("writing-white.png");
+}
+#main-content ul.menu li:nth-child(2) a:before {
+  background-image: url("email-black.png");
+}
+#main-content ul.menu li:nth-child(2) a.active-menu:before {
+  background-image: url("email-white.png");
 }
 
 /* ------------------------------------------------------------
