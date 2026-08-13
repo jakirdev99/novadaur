@@ -96,6 +96,50 @@ header .logo {
 }
 
 /* ------------------------------------------------------------
+   5. FORM TITLE & INPUTS
+   ------------------------------------------------------------ */
+/* Override gray box on top form callout text block */
+.ndpet-form .en__component--textblock:first-child,
+.ndpet-form .en__component--textblock:first-child *,
+.endpet-form h2:first-child,
+.ndpet-form h3:first-child {
+  background-color: transparent !important;
+  background: transparent !important;
+  color: var(--ndpet-primary) !important;
+  font-family: var(--ndpet-font-heading) !important;
+  font-size: 22px !important;
+  font-weight: 700 !important;
+  text-align: center !important;
+  margin-bottom: 16px !important;
+  padding: 0 !important;
+}
+
+.en__field {
+  margin-bottom: 16px !important;
+}
+
+.en__field__label {
+  display: block !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  color: var(--ndpet-text) !important;
+  margin-bottom: 6px !important;
+}
+
+.en__field__input--text,
+.en__field__input--select,
+.en__field__input--textarea {
+  width: 100% !important;
+  padding: 12px 14px !important;
+  border: 1px solid #e2d9f0 !important;
+  border-radius: 8px !important;
+  font-family: var(--ndpet-font-body) !important;
+  font-size: 15px !important;
+  box-sizing: border-box !important;
+  background-color: #ffffff !important;
+}
+
+/* ------------------------------------------------------------
    7. FOOTER
    ------------------------------------------------------------ */
 footer {
