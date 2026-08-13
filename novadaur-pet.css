@@ -149,8 +149,6 @@ input#popup {position: absolute;opacity: 0;top: 0;left: 0;}
 #main-content ul.menu li:nth-child(1) a.active-menu:before { background-position: 0px -40px; }
 #main-content ul.menu li:nth-child(2) a:before { background-position: -40px -3px; }
 #main-content ul.menu li:nth-child(2) a.active-menu:before { background-position: -40px -40px; }
-#main-content ul.menu li:nth-child(3) a:before { background-position: -76px -3px; }
-#main-content ul.menu li:nth-child(3) a.active-menu:before { background-position: -76px -40px; }
 #main-content ul.menu { display: -webkit-flex; display: flex; margin: 0; padding: 0; flex-wrap: wrap; background:#fff;}
 #main-content ul.menu li { -webkit-flex: 1; -ms-flex: 1; flex: 1; list-style: none; width: 33%; }
 #main-content ul.menu li a { display: block;line-height: normal; text-decoration: none; font-size: 12px; font-weight: bold;  display: flex;  flex-direction: column;  min-height: 60px; padding: 0 12px; position: relative;color: #000000;display: flex; justify-content: center; flex-direction: column;  min-height: 50px; padding: 0 12px; position: relative;  font-size: 12px; overflow: hidden;text-overflow: ellipsis;padding-left: 55px; background: #a4c552;}
