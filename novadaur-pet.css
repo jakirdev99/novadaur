@@ -191,7 +191,7 @@ label.popup-btn span {
     animation: wiggle 2.7s 5;
 }
 label.popup-btn span {
-    background: #B54B3A;
+    background: var(--ndpet-button-gradient);
     display: block;
     text-align: center;
     color: #ffffff;
