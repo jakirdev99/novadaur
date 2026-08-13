@@ -351,4 +351,11 @@ label.popup-btn:hover {
     line-height: 16px;
     color: #fff;
   }
+#main-content .sub-content {
+  max-width: 100%;
+  margin: 60px auto;
+}
+#main-content .sub-content .ndpet-form {
+  margin-top: 0px;
+}
 }
