@@ -101,13 +101,12 @@ footer {
 }
 .ndpet-logo-wrap {
      display: inline-block;
-   margin-bottom: 40px;
+     margin: 0 auto 40px;
 }
 .ndpet-footer-logo {
   max-width: 130px !important;
   width: 130px !important;
   height: auto !important;
-  margin: 0 auto px;
 }
 .ndpet-footer-tagline,
 .ndpet-footer-copy {
