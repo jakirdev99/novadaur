@@ -186,3 +186,19 @@ label.popup-btn {
     display: block;
     cursor: pointer;
 }
+
+label.popup-btn span {
+    animation: wiggle 2.7s 5;
+}
+label.popup-btn span {
+    background: #B54B3A;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    padding: 18px 0;
+    width: 80%;
+    margin: 0 auto;
+    font-size: 20px;
+    font-weight: bold;
+    border-radius: 10px;
+}
