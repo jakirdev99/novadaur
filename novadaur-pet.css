@@ -118,12 +118,12 @@ header .logo {
   box-sizing: border-box !important;
   background-color: #ffffff !important;
 }
-/* .en__field--16721 .en__field__item {
+.en__field--16721 .en__field__item {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
    gap: 10px;
-} */
+} 
 .en__field--16721 .en__field__item input[type="checkbox"] {
    display: inline-block;
    width: 35px;
