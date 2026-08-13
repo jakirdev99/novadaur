@@ -263,3 +263,17 @@ label.popup-btn:hover {
 @media (min-width:993px) {
    label.popup-btn { display: none !important; }
 }
+@media (max-width: 992px) {
+    #popup:checked+ .wrapper label.popup-btn:before {
+        content: '+';
+        display: block;
+        -ms-transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        text-align: center;
+        font-weight: 100;
+        font-size: 72px;
+        line-height: 16px;
+        color: #fff;
+    }
+}
