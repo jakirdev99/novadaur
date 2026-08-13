@@ -320,7 +320,19 @@ label.popup-btn:hover {
   }
 }
 @media (max-width: 992px) {
-  #popup:checked + .wrapper label.popup-btn:before {
+   #popup:checked+ label.popup-btn {
+        width: 50px;
+        height: 50px;
+        bottom: auto;
+        top: 20px;
+        left: auto;
+        right: 20px;
+        cursor: pointer;
+        background: none;
+        position: absolute;
+        overflow: hidden;
+    }
+  #popup:checked + label.popup-btn:before {
     content: "+";
     display: block;
     -ms-transform: rotate(45deg);
