@@ -198,7 +198,7 @@ label.popup-btn span {
     font-weight: bold;
     border-radius: 10px;
 }
-/*SHAKER*/
+/*SHAKER ANIMATION*/
 @keyframes wiggle {
   2% {
     -webkit-transform: translateX(3px) rotate(2deg);
@@ -248,4 +248,11 @@ label.popup-btn span {
 
 label.popup-btn:hover {
   animation: none;
+}
+
+/* ------------------------------------------------------------
+   7. RESPONSIVE BREAKPOINT
+   ------------------------------------------------------------ */
+@media (min-width:993px) {
+   label.popup-btn { display: none !important; }
 }
