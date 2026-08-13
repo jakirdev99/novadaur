@@ -61,7 +61,7 @@ header .logo {
   margin: 60px auto;
 }
 #main-content .sub-content .ndpet-content {
-   padding: 0 30px;
+  padding: 0 30px;
 }
 
 #main-content .sub-content .ndpet-form {
@@ -94,6 +94,11 @@ footer {
   margin-top: 40px !important;
   box-sizing: border-box !important;
 }
+.ndpet-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
 .ndpet-footer-logo {
   max-width: 130px !important;
   width: 130px !important;
@@ -101,10 +106,15 @@ footer {
   display: block !important;
   margin: 0 auto 15px;
 }
-.ndpet-footer-content {
-  max-width: 1200px;
-  margin: 0 auto;
-  text-align: left;
+.ndpet-footer-tagline,
+.ndpet-footer-copy {
+  color: #fdf9f3 !important;
+}
+.ndpet-footer-links a {
+  color: #fdf9f3 !important;
+  opacity: 0.8;
+  text-decoration: none;
+  margin-right: 20px;
 }
 .ndpet-footer-links a {
   color: #fdf9f3 !important;
