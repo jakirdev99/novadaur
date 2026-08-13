@@ -118,6 +118,14 @@ header .logo {
   box-sizing: border-box !important;
   background-color: #ffffff !important;
 }
+.en__field--16721 .en__field__item {
+   display: flex;
+   justify-content: space-between;
+   align-items: flex-start;
+}
+.en__field--16721 .en__field__item input {
+   width: 8%;
+}
 #main-content .en__component--row--2, .en__field--select, .en__field {
     position: relative;
 }
