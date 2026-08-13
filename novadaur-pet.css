@@ -100,13 +100,13 @@ footer {
   text-align: center;
 }
 .ndpet-logo-wrap {
+     display: inline-block;
    margin-bottom: 40px;
 }
 .ndpet-footer-logo {
   max-width: 130px !important;
   width: 130px !important;
   height: auto !important;
-  display: inline-block !important;
   margin: 0 auto px;
 }
 .ndpet-footer-tagline,
