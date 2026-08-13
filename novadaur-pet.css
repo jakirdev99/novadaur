@@ -14,6 +14,20 @@
    --ndpet-sticky-bar-bg: rgba(27, 27, 27, 0.88);
 }
 
+/* ------------------------------------------------------------
+   1. GLOBAL RESET & COLLAPSE EMPTY BANNER ROWS
+   ------------------------------------------------------------ */
+html, body {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  background-color: var(--ndpet-bg) !important;
+  color: var(--ndpet-text) !important;
+  font-family: var(--ndpet-font-body) !important;
+  overflow-x: hidden !important;
+}
+
 #main-content .sub-content {
    width: 100%;
    max-width:90%;
