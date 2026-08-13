@@ -3,21 +3,22 @@
    ============================================================ */
 
 :root {
-   --ndpet-primary: #7123a8;
-   --ndpet-accent: #ff5722;
-   --ndpet-bg: #ffffff;
-   --ndpet-form-bg: #f5edfb;
-   --ndpet-text: #1b1b1b;
-   --ndpet-font-heading: 'Capriola', sans-serif;
-   --ndpet-font-body: 'Lexend', sans-serif;
-   --ndpet-button-gradient: linear-gradient(90deg, #7123a8 0%, #ff5722 100%);
-   --ndpet-sticky-bar-bg: rgba(27, 27, 27, 0.88);
+  --ndpet-primary: #7123a8;
+  --ndpet-accent: #ff5722;
+  --ndpet-bg: #ffffff;
+  --ndpet-form-bg: #f5edfb;
+  --ndpet-text: #1b1b1b;
+  --ndpet-font-heading: "Capriola", sans-serif;
+  --ndpet-font-body: "Lexend", sans-serif;
+  --ndpet-button-gradient: linear-gradient(90deg, #7123a8 0%, #ff5722 100%);
+  --ndpet-sticky-bar-bg: rgba(27, 27, 27, 0.88);
 }
 
 /* ------------------------------------------------------------
    1. GLOBAL RESET & COLLAPSE EMPTY BANNER ROWS
    ------------------------------------------------------------ */
-html, body {
+html,
+body {
   width: 100% !important;
   max-width: 100% !important;
   margin: 0 !important;
@@ -29,81 +30,79 @@ html, body {
 }
 
 /* Header */
-        header {
-            width: 100%;
-            position: relative;
-        }
-        header .overlay
-         {
-            height: 500px;
-            display: flex;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            opacity: 0.20;
-            background: #fff;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        header .logo {
-            position: absolute;
-            top: 20px;
-            left: 4%;
-            z-index: 99;
-        }
+header {
+  width: 100%;
+  position: relative;
+}
+header .overlay {
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  opacity: 0.2;
+  background: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+header .logo {
+  position: absolute;
+  top: 20px;
+  left: 4%;
+  z-index: 99;
+}
 
 #main-content .sub-content {
-   width: 100%;
-   max-width:90%;
-   margin: auto;
+  width: 100%;
+  max-width: 90%;
+  margin: auto;
 }
 
 #main-content .sub-content .ndpet-form {
-   background-color: #f5edfb;
-   padding: 30px 50px;
-   border-radius: 15px;
+  background-color: #f5edfb;
+  padding: 30px 50px;
+  border-radius: 15px;
 }
 
 /* Submit Button */
 #main-content .sub-content .ndpet-form .en__submit button {
-   background: var(--ndpet-button-gradient);
-   color: #ffffff;
-   border: none;
-   border-radius: 10px;
-   font-family: var(--ndpet-font-heading);
-   font-size: 18px;
-   padding: 14px 0;
-   width: 100%;
-   cursor: pointer;
-   margin-top: 10px;
+  background: var(--ndpet-button-gradient);
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-family: var(--ndpet-font-heading);
+  font-size: 18px;
+  padding: 14px 0;
+  width: 100%;
+  cursor: pointer;
+  margin-top: 10px;
 }
 
 /* ------------------------------------------------------------
    7. FOOTER
    ------------------------------------------------------------ */
 footer {
-   padding: 40px 20px 50px !important;
-   width: 100% !important;
-   margin-top: 40px !important;
-   box-sizing: border-box !important;
+  padding: 40px 20px 50px !important;
+  width: 100% !important;
+  margin-top: 40px !important;
+  box-sizing: border-box !important;
 }
-        .ndpet-footer-logo {
-            max-width: 130px !important;
-            width: 130px !important;
-            height: auto !important;
-            display: block !important;
-            margin: 0 auto 15px;
-        }
-        .ndpet-footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            text-align: left;
-        }
-        .ndpet-footer-links a
-         {
-            color: #fdf9f3 !important;
-            opacity: 0.8;
-            text-decoration: none;
-            margin-right: 20px;
-        }
+.ndpet-footer-logo {
+  max-width: 130px !important;
+  width: 130px !important;
+  height: auto !important;
+  display: block !important;
+  margin: 0 auto 15px;
+}
+.ndpet-footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+.ndpet-footer-links a {
+  color: #fdf9f3 !important;
+  opacity: 0.8;
+  text-decoration: none;
+  margin-right: 20px;
+}
