@@ -124,7 +124,7 @@ header .logo {
    align-items: flex-start;
    gap: 5px;
 }
-.en__field--16721 .en__field__item input {
+.en__field--16721 .en__field__item input[type="checkbox"] {
    width: 25px;
    height:25px;
 }
