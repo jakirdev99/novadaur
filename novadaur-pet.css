@@ -97,14 +97,14 @@ footer {
 .ndpet-footer-content {
   max-width: 1200px;
   margin: 0 auto;
-  text-align: left;
+  text-align: center;
 }
 .ndpet-footer-logo {
   max-width: 130px !important;
   width: 130px !important;
   height: auto !important;
-  display: block !important;
-  margin: 0 auto 15px;
+  display: inline-block !important;
+  margin: 0 auto px;
 }
 .ndpet-footer-tagline,
 .ndpet-footer-copy {
