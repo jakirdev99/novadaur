@@ -72,14 +72,14 @@ header .logo {
 }
 
 /* Strip native EN container background colors */
-.en__component--formblock,
+/* .en__component--formblock,
 .en__component--textblock,
 .en__field,
 .en__field__element {
   background: transparent !important;
   border: none !important;
   box-shadow: none !important;
-}
+} */
 
 /* Submit Button */
 #main-content .sub-content .ndpet-form .en__submit button {
