@@ -143,7 +143,7 @@ input#popup {position: absolute;opacity: 0;top: 0;left: 0;}
    7. PROGRESS MENU
    ------------------------------------------------------------ */
 #main-content ul.menu li:nth-child(1) a:before {background-position: -3px -3px; }
-.menu li a.active-menu:after {
+#main-conten .menu li a.active-menu:after {
     display: none !important;
 }
 #main-content ul.menu li:nth-child(1) a.active-menu:before { background-position: 0px -40px; }
