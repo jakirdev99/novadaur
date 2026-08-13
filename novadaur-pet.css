@@ -320,7 +320,7 @@ label.popup-btn:hover {
   }
 }
 @media (max-width: 992px) {
-   #popup:checked+ label.popup-btn {
+   #popup:checked + label.popup-btn {
         width: 50px;
         height: 50px;
         bottom: auto;
