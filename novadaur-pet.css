@@ -122,9 +122,11 @@ header .logo {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
+   gap: 5px;
 }
 .en__field--16721 .en__field__item input {
-   width: 8%;
+   width: 25;
+   height:25px;
 }
 #main-content .en__component--row--2, .en__field--select, .en__field {
     position: relative;
