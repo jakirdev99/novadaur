@@ -122,11 +122,11 @@ header .logo {
    display: flex;
    justify-content: space-between;
    align-items: flex-start;
-   gap: 5px;
+   gap: 10px;
 } */
 .en__field--16721 .en__field__item input[type="checkbox"] {
    display: inline-block;
-   width: 20px;
+   width: 35px;
    height:20px;
    margin: 0;
 }
