@@ -95,6 +95,8 @@ header .logo {
   margin-top: 10px;
 }
 
+input#popup {position: absolute;opacity: 0;top: 0;left: 0;}
+
 /* ------------------------------------------------------------
    5. FORM INPUTS
    ------------------------------------------------------------ */
