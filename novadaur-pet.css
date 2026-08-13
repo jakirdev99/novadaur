@@ -99,6 +99,9 @@ footer {
   margin: 0 auto;
   text-align: center;
 }
+.ndpet-logo-wrap {
+   margin-bottom: 40px;
+}
 .ndpet-footer-logo {
   max-width: 130px !important;
   width: 130px !important;
