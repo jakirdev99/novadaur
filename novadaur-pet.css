@@ -181,16 +181,16 @@ input#popup {
 
 /* Icons */
 #main-content ul.menu li:nth-child(1) a:before {
-  background-image: url("writing-black.png");
+  background-image: url("https://bd6ca9cefa6fb6e0adf1-c2f9aa1adb9f60a775f60074e4c86031.ssl.cf5.rackcdn.com/20024/wrting-black.png?v=1786634843000");
 }
 #main-content ul.menu li:nth-child(1) a.active-menu:before {
-  background-image: url("writing-white.png");
+  background-image: url("https://bd6ca9cefa6fb6e0adf1-c2f9aa1adb9f60a775f60074e4c86031.ssl.cf5.rackcdn.com/20024/writing-white.png?v=1786634842000");
 }
 #main-content ul.menu li:nth-child(2) a:before {
-  background-image: url("email-black.png");
+  background-image: url("https://bd6ca9cefa6fb6e0adf1-c2f9aa1adb9f60a775f60074e4c86031.ssl.cf5.rackcdn.com/20024/email-black.png?v=1786634839000");
 }
 #main-content ul.menu li:nth-child(2) a.active-menu:before {
-  background-image: url("email-white.png");
+  background-image: url("https://bd6ca9cefa6fb6e0adf1-c2f9aa1adb9f60a775f60074e4c86031.ssl.cf5.rackcdn.com/20024/email-white.png?v=1786634841000");
 }
 
 /* ------------------------------------------------------------
