@@ -171,3 +171,18 @@ footer {
   text-decoration: none;
   margin-right: 20px;
 }
+
+/* ------------------------------------------------------------
+   7. MOBILE POPUP BUTTON
+   ------------------------------------------------------------ */
+label.popup-btn {
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    padding: 6px 0;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    display: block;
+    cursor: pointer;
+}
