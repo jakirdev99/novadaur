@@ -106,7 +106,7 @@ header .logo {
   margin-bottom: 6px !important;
 }
 .en__field__element {
-   display: block;
+   display: block !important;
 }
 .en__component--formblock .en__field__input {
   width: 100%;
