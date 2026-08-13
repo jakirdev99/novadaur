@@ -28,6 +28,31 @@ html, body {
   overflow-x: hidden !important;
 }
 
+/* Header */
+        header {
+            width: 100%;
+            position: relative;
+        }
+        header .overlay
+         {
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            opacity: 0.20;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header .logo {
+            position: absolute;
+            top: 20px;
+            left: 4%;
+            z-index: 99;
+        }
+
 #main-content .sub-content {
    width: 100%;
    max-width:90%;
@@ -53,3 +78,32 @@ html, body {
    cursor: pointer;
    margin-top: 10px;
 }
+
+/* ------------------------------------------------------------
+   7. FOOTER
+   ------------------------------------------------------------ */
+footer {
+   padding: 40px 20px 50px !important;
+   width: 100% !important;
+   margin-top: 40px !important;
+   box-sizing: border-box !important;
+}
+        .ndpet-footer-logo {
+            max-width: 130px !important;
+            width: 130px !important;
+            height: auto !important;
+            display: block !important;
+            margin: 0 auto 15px;
+        }
+        .ndpet-footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: left;
+        }
+        .ndpet-footer-links a
+         {
+            color: #fdf9f3 !important;
+            opacity: 0.8;
+            text-decoration: none;
+            margin-right: 20px;
+        }
