@@ -85,7 +85,12 @@ header .logo {
   margin-top: 10px;
 }
 
-input#popup {position: absolute;opacity: 0;top: 0;left: 0;}
+input#popup {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+}
 
 /* ------------------------------------------------------------
    5. FORM INPUTS
@@ -98,7 +103,7 @@ input#popup {position: absolute;opacity: 0;top: 0;left: 0;}
   margin-bottom: 6px !important;
 }
 .en__field__element {
-   display: block !important;
+  display: block !important;
 }
 .en__component--formblock .en__field__input {
   width: 100%;
@@ -111,35 +116,96 @@ input#popup {position: absolute;opacity: 0;top: 0;left: 0;}
   background-color: #ffffff !important;
 }
 .en__field--16721 .en__field__item {
-   display: flex;
-   justify-content: space-between;
-   align-items: flex-start;
-   gap: 10px;
-} 
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+}
 .en__field--16721 .en__field__item input[type="checkbox"] {
-   display: inline-block;
-   width: 35px;
-   height:20px;
-   margin: 0;
+  display: inline-block;
+  width: 35px;
+  height: 20px;
+  margin: 0;
 }
 .en__field--16721 .en__field__item label {
-   display: inline-block !important;
+  display: inline-block !important;
 }
-#main-content .en__component--row--2, .en__field--select, .en__field {
-    position: relative;
+#main-content .en__component--row--2,
+.en__field--select,
+.en__field {
+  position: relative;
 }
 
 /* ------------------------------------------------------------
    7. PROGRESS MENU
    ------------------------------------------------------------ */
-#main-content ul.menu li:nth-child(1) a.active-menu:before { background-position: 0px -40px; }
-#main-content ul.menu li:nth-child(2) a:before { background-position: -40px -3px; }
-#main-content ul.menu li:nth-child(2) a.active-menu:before { background-position: -40px -40px; }
-#main-content ul.menu { display: -webkit-flex; display: flex; gap:5px; margin-bottom: 10px; padding: 0; flex-wrap: wrap; background:#fff;}
-#main-content ul.menu li { -webkit-flex: 1; -ms-flex: 1; flex: 1; list-style: none; width: 33%; }
-#main-content ul.menu li a { display: block;line-height: normal; text-decoration: none; font-size: 12px; font-weight: bold;  display: flex;  flex-direction: column;  min-height: 60px; padding: 0 12px; position: relative;color: #000000;display: flex; justify-content: center; flex-direction: column;  min-height: 50px; padding: 0 12px; position: relative;  font-size: 12px; overflow: hidden;text-overflow: ellipsis;padding-left: 55px; background: #27ae60;}
-#main-content ul.menu li a.active-menu { color: #ffffff; background: #f39c12;}
-#main-content ul.menu li a:before { content: ''; display: block; width: 30px; height: 30px; background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2281/form-tab-icon.png?v=1755754782000) no-repeat; position: absolute; top: 10px; left: 14px; background-size: 110px; -webkit-transition: all .4s ease; transition: all .4s ease; }
+#main-content ul.menu li:nth-child(1) a.active-menu:before {
+  background-position: 0px -40px;
+}
+#main-content ul.menu li:nth-child(2) a:before {
+  background-position: -40px -3px;
+}
+#main-content ul.menu li:nth-child(2) a.active-menu:before {
+  background-position: -40px -40px;
+}
+#main-content ul.menu {
+  display: -webkit-flex;
+  display: flex;
+  gap: 5px;
+  margin-bottom: 10px;
+  padding: 0;
+  flex-wrap: wrap;
+  background: #fff;
+}
+#main-content ul.menu li {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  list-style: none;
+  width: 33%;
+}
+#main-content ul.menu li a {
+  display: block;
+  line-height: normal;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  min-height: 60px;
+  padding: 0 12px;
+  position: relative;
+  color: #000000;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 50px;
+  padding: 0 12px;
+  position: relative;
+  font-size: 12px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-left: 55px;
+  background: #27ae60;
+}
+#main-content ul.menu li a.active-menu {
+  color: #ffffff;
+  background: #f39c12;
+}
+#main-content ul.menu li a:before {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 30px;
+  background: url(https://aaf1a18515da0e792f78-c27fdabe952dfc357fe25ebf5c8897ee.ssl.cf5.rackcdn.com/2281/form-tab-icon.png?v=1755754782000)
+    no-repeat;
+  position: absolute;
+  top: 10px;
+  left: 14px;
+  background-size: 110px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
 
 /* ------------------------------------------------------------
    7. FOOTER
@@ -156,8 +222,8 @@ footer {
   text-align: center;
 }
 .ndpet-logo-wrap {
-     display: inline-block;
-     margin: 0 auto 30px;
+  display: inline-block;
+  margin: 0 auto 30px;
 }
 .ndpet-footer-logo {
   max-width: 130px !important;
@@ -185,27 +251,27 @@ footer {
    7. MOBILE POPUP BUTTON
    ------------------------------------------------------------ */
 label.popup-btn {
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    padding: 6px 0;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    z-index: 99;
-    display: block;
-    cursor: pointer;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 6px 0;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 99;
+  display: block;
+  cursor: pointer;
 }
 label.popup-btn span {
-    background: var(--ndpet-button-gradient);
-    display: block;
-    text-align: center;
-    color: #ffffff;
-    padding: 18px 0;
-    width: 80%;
-    margin: 0 auto;
-    font-size: 20px;
-    font-weight: bold;
-    border-radius: 10px;
+  background: var(--ndpet-button-gradient);
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  padding: 18px 0;
+  width: 80%;
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 10px;
 }
 /*SHAKER ANIMATION*/
 @keyframes wiggle {
@@ -262,20 +328,22 @@ label.popup-btn:hover {
 /* ------------------------------------------------------------
    7. RESPONSIVE BREAKPOINT
    ------------------------------------------------------------ */
-@media (min-width:993px) {
-   label.popup-btn { display: none !important; }
+@media (min-width: 993px) {
+  label.popup-btn {
+    display: none !important;
+  }
 }
 @media (max-width: 992px) {
-    #popup:checked+ .wrapper label.popup-btn:before {
-        content: '+';
-        display: block;
-        -ms-transform: rotate(45deg);
-        -webkit-transform: rotate(45deg);
-        transform: rotate(45deg);
-        text-align: center;
-        font-weight: 100;
-        font-size: 72px;
-        line-height: 16px;
-        color: #fff;
-    }
+  #popup:checked + .wrapper label.popup-btn:before {
+    content: "+";
+    display: block;
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    text-align: center;
+    font-weight: 100;
+    font-size: 72px;
+    line-height: 16px;
+    color: #fff;
+  }
 }
