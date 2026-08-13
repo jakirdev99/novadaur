@@ -130,6 +130,9 @@ header .logo {
    height:20px;
    margin: 0;
 }
+.en__field--16721 .en__field__item label {
+   display: inline-block !important;
+}
 #main-content .en__component--row--2, .en__field--select, .en__field {
     position: relative;
 }
