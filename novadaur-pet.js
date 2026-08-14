@@ -1,30 +1,30 @@
 $(document).ready(function () {
+
   const nextButton = document.getElementById("popup");
-  const fromContainer = document.querySelector(".ndpet-form");
+  const formContainer = document.querySelector(".ndpet-form");
 
-function toggleFormBlock() {
-  if (window.innerWidth < 993) {
-    fromContainer.classList.toggle("show", nextButton.checked);
+  function toggleFormBlock() {
+    if (window.innerWidth < 993) {
+      formContainer.classList.toggle("show", nextButton.checked);
+    }
   }
-}
 
-// Automatically open form when user visits a later step URL
-  var pathArray = window.location.pathname.split("/").filter(Boolean);
-  var currentId = Number(pathArray[pathArray.length - 1]); // convert to number
+  // Automatically open form when visiting a later step URL
+  const pathArray = window.location.pathname.split("/").filter(Boolean);
+  const currentStep = Number(pathArray[pathArray.length - 1]);
 
-  if (currentId > 1) {
+  if (currentStep > 1) {
     nextButton.checked = true;
-    console.log("Next button is now checked because currentId > 1");
   }
-
-  // Run once on load
+  // Initial state
   toggleFormBlock();
 
-  // Listen for next button toggle
+  // Update when button changes
   nextButton.addEventListener("change", toggleFormBlock);
 
-  // Also handle screen resize
+  // Update on resize
   window.addEventListener("resize", toggleFormBlock);
+
 });
 
 // :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::keyup scripts::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
