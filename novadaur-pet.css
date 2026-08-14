@@ -322,10 +322,10 @@ label.popup-btn:hover {
    #popup:checked ~ label.popup-btn span {
         display: none;
     }
-   #popup:checked ~ .ndpet-content {
+   #popup:checked ~ main .ndpet-content {
       display: none;
    }
-   #popup:checked ~ .sub-content {
+   #popup:checked ~ main .sub-content {
       margin-top: 0;
    }
 }
