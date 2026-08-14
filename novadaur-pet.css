@@ -146,9 +146,7 @@ height: 60px;
 .en__field--NOT_TAGGED_2 label {
    margin-left: 22px;
 }
-.en__field--16721 label {
-   font-size: 14px;
-}
+
 
 #google-address-autocomplete {
    border: 1px solid #e2d9f0 !important;
@@ -192,6 +190,10 @@ height: 60px;
 .en__field:focus-within .en__field__label {
     top: 0px;
     font-size: 12px !important;
+}
+
+.en__field--16721 label {
+   font-size: 14px;
 }
 
 /* ------------------------------------------------------------
