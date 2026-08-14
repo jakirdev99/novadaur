@@ -1,18 +1,14 @@
 $(document).ready(function () {
-  const checkbox = document.getElementById("popup");
-  const formBlock = document.querySelector(".ndpet-form");
+  const nextButton = document.getElementById("popup");
+  const  fromContainer= document.querySelector(".ndpet-form");
 
 function toggleFormBlock() {
   if (window.innerWidth < 993) {
-    formBlock.classList.toggle("show", checkbox.checked);
+    fromContainer.classList.toggle("show", nextButton.checked);
   } else {
-    formBlock.classList.add("show");
+    fromContainer.classList.add("show");
   }
 }
-
-  // Initial logs
-  console.log("Initially checked:", checkbox.checked);
-  console.log("Value attribute:", checkbox.value);
 
   // URL logic
   var pathArray = window.location.pathname.split("/").filter(Boolean);
