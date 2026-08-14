@@ -131,175 +131,185 @@ $(document).ready(function () {
 
 /* ============================================================ from UI enhancements, custom dropdowns, floating labels and address autocomplete ============================================================ */
 $(document).ready(function () {
-
   initFloatLabels();
-  initAddressAutocomplete();
-
 });
 
 // add floating label behavior
-
 function initFloatLabels() {
-
     $(".en__field").each(function () {
-
         const field = $(this);
         const input = field.find(".en__field__input");
-
-
         function checkValue() {
             field.toggleClass(
                 "populated",
                 input.val().trim() !== ""
             );
         }
-
-
         checkValue();
-
         input.on("keyup change", checkValue);
 
     });
 
 }
 
-initFloatLabels();
-
-// google address search and field mapping
+// google fills address related EN fields
 
 function initAddressAutocomplete() {
 
-  const addressField =
-    "en__field_supporter_NOT_TAGGED_2";
 
-
-  const autocomplete =
-    new google.maps.places.Autocomplete(
-      document.getElementById(addressField),
-      {
-        types: ["geocode"],
-      }
+    const addressInput = document.getElementById(
+        "en__field_supporter_NOT_TAGGED_2"
     );
 
 
-  autocomplete.setFields([
-    "address_component"
-  ]);
-
-
-
-  autocomplete.addListener(
-    "place_changed",
-    function () {
-
-
-      const place =
-        autocomplete.getPlace();
-
-
-      if (!place.address_components) {
+    if (!addressInput || typeof google === "undefined") {
         return;
-      }
-
-
-      clearAddressErrors();
-
-
-      mapAddressFields(
-        place.address_components
-      );
-
-
     }
-  );
+
+
+    const autocomplete =
+        new google.maps.places.Autocomplete(
+            addressInput,
+            {
+                types: ["geocode"],
+            }
+        );
+
+
+    autocomplete.setFields([
+        "address_component"
+    ]);
+
+
+
+    autocomplete.addListener(
+        "place_changed",
+        function () {
+
+
+            const place =
+                autocomplete.getPlace();
+
+
+
+            if (!place.address_components) {
+                return;
+            }
+
+
+            clearAddressErrors();
+
+
+            fillAddressFields(
+                place.address_components
+            );
+
+
+        }
+    );
+
+}
+
+/* ============================================================
+   MAP GOOGLE ADDRESS DATA TO EN FIELDS
+   ============================================================ */
+
+
+function fillAddressFields(components) {
+
+
+    components.forEach(function (component) {
+
+
+        const type = component.types[0];
+
+
+        switch (type) {
+
+
+            case "street_number":
+
+                setFieldValue(
+                    "#en__field_supporter_address1",
+                    component.long_name
+                );
+
+            break;
+
+
+
+            case "route":
+
+                appendAddress(
+                    component.long_name
+                );
+
+            break;
+
+
+
+            case "locality":
+
+                setFieldValue(
+                    "#en__field_supporter_city",
+                    component.long_name
+                );
+
+            break;
+
+
+
+            case "administrative_area_level_1":
+
+                setSelectValue(
+                    "#en__field_supporter_region",
+                    component.long_name
+                );
+
+            break;
+
+
+
+            case "postal_code":
+
+                setFieldValue(
+                    "#en__field_supporter_postcode",
+                    component.long_name
+                );
+
+            break;
+
+
+
+            case "country":
+
+                setSelectValue(
+                    "#en__field_supporter_country",
+                    component.short_name
+                );
+
+            break;
+
+
+        }
+
+
+    });
 
 }
 
 
 
-
-
-function mapAddressFields(components) {
-
-
-  components.forEach(function (component) {
-
-
-    const type = component.types[0];
-
-
-    switch(type) {
-
-
-      case "country":
-
-        setSelectValue(
-          "#en__field_supporter_country",
-          component.short_name
-        );
-
-        break;
-
-
-
-      case "administrative_area_level_1":
-
-        setSelectValue(
-          "#en__field_supporter_region",
-          component.long_name
-        );
-
-        break;
-
-
-
-      case "locality":
-
-        setFieldValue(
-          "#en__field_supporter_city",
-          component.long_name
-        );
-
-        break;
-
-
-
-      case "postal_code":
-
-        setFieldValue(
-          "#en__field_supporter_postcode",
-          component.long_name
-        );
-
-        break;
-
-
-
-      case "route":
-
-        setFieldValue(
-          "#en__field_supporter_address1",
-          component.long_name
-        );
-
-        break;
-
-
-    }
-
-  });
-
-}
-
-
-
+/* ============================================================
+   FIELD HELPERS
+   ============================================================ */
 
 
 function setFieldValue(selector, value) {
 
-  $(selector)
-    .val(value)
-    .trigger("change");
+    $(selector)
+        .val(value)
+        .trigger("change");
 
 }
 
@@ -307,22 +317,61 @@ function setFieldValue(selector, value) {
 
 function setSelectValue(selector, value) {
 
-  $(selector)
-    .val(value)
-    .trigger("change");
+    $(selector)
+        .val(value)
+        .trigger("change");
 
 }
 
+
+
+function appendAddress(value) {
+
+
+    const field =
+        $("#en__field_supporter_address1");
+
+
+    const current =
+        field.val();
+
+
+    field
+        .val(
+            current
+            ? current + " " + value
+            : value
+        )
+        .trigger("change");
+
+}
+
+
+
+
+
+/* ============================================================
+   REMOVE ADDRESS VALIDATION ERROR
+   ============================================================ */
+
+
 function clearAddressErrors() {
 
-  $(".en__field--NOT_TAGGED_42 .en__field__error")
-    .remove();
+
+    const addressField =
+        $(".en__field--NOT_TAGGED_42");
 
 
-  $(".en__field--NOT_TAGGED_42")
-    .removeClass(
-      "en__field--validationFailed"
-    );
+    addressField
+        .find(".en__field__error")
+        .remove();
+
+
+    addressField
+        .removeClass(
+            "en__field--validationFailed"
+        );
+
 }
 /* ============================================================ x ============================================================ */
 
