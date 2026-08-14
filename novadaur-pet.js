@@ -165,17 +165,12 @@ function initFloatLabels() {
 
 initFloatLabels();
 
-/* ============================================================
-   ADDRESS AUTOCOMPLETE
-   Google address search and field mapping
-   ============================================================ */
-
+// google address search and field mapping
 
 function initAddressAutocomplete() {
 
-
   const addressField =
-    "en__field_supporter_NOT_TAGGED_42";
+    "en__field_supporter_NOT_TAGGED_2";
 
 
   const autocomplete =
@@ -183,9 +178,6 @@ function initAddressAutocomplete() {
       document.getElementById(addressField),
       {
         types: ["geocode"],
-        componentRestrictions: {
-          country: "UK"
-        }
       }
     );
 
