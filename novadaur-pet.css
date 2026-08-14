@@ -323,6 +323,7 @@ label.popup-btn:hover {
     }
    #popup:checked ~ main .ndpet-content {
       display: none;
+      opacity: 0;
    }
    #popup:checked ~ main .sub-content {
       margin-top: 0;
@@ -333,6 +334,8 @@ label.popup-btn:hover {
 @media (min-width: 993px) {
   label.popup-btn {
     display: none !important;
+    transition: opacity 1s ease;
+    opacity: 0;
   }
 }
 
@@ -367,6 +370,6 @@ label.popup-btn:hover {
 }
 #main-content .sub-content .ndpet-form {
   margin-top: 0px;
-   border-radius: 0px;
+  border-radius: 0px;
 }
 }
