@@ -318,6 +318,10 @@ label.popup-btn:hover {
       height: 100px;
       background: #000 !important;
     }
+   #popup:checked ~ header img {
+    width: 6rem;
+    filter: brightness(0) invert(1);
+}
    #popup:checked ~ label.popup-btn span {
         display: none;
     }
