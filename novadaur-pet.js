@@ -152,7 +152,7 @@ function initFloatLabels() {
 
 }
 
-// google fills address related EN fields
+// google address autocomplete, google fills address related EN fields
 
 function initAddressAutocomplete() {
 
@@ -210,10 +210,7 @@ function initAddressAutocomplete() {
 
 }
 
-/* ============================================================
-   MAP GOOGLE ADDRESS DATA TO EN FIELDS
-   ============================================================ */
-
+// map google address data to en fields
 
 function fillAddressFields(components) {
 
