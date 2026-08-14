@@ -5,12 +5,10 @@ $(document).ready(function () {
 function toggleFormBlock() {
   if (window.innerWidth < 993) {
     fromContainer.classList.toggle("show", nextButton.checked);
-  } else {
-    fromContainer.classList.add("show");
   }
 }
 
-  // URL logic
+// Automatically open form when user visits a later step URL
   var pathArray = window.location.pathname.split("/").filter(Boolean);
   var currentId = Number(pathArray[pathArray.length - 1]); // convert to number
 
