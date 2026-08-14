@@ -359,9 +359,6 @@ label.popup-btn:hover {
 #main-content .sub-content {
   max-width: 100%;
 }
-#main-content .sub-content .ndpet-form {
-    display: none;
-  }
   #main-content .ndpet-form.show {
    margin-top: 0px;
   border-radius: 0px;
