@@ -137,14 +137,15 @@ input#popup {
 .en__field {
   position: relative;
 }
-.en__field--16721 .en__field__item input[type="checkbox"] {
-  display: inline-block;
-  width: 35px;
-  height: 20px;
-  margin: 0;
+.en__field label {
+  position: absolute;
+  transition: all 0.2s ease;
 }
-.en__field--16721 .en__field__item label {
-  display: inline-block !important;
+
+.en__field.focused label,
+.en__field.populated label {
+  transform: translateY(-20px);
+  font-size: 12px;
 }
 
 
