@@ -356,7 +356,7 @@ function clearAddressErrors() {
 
 
     const addressField =
-        $(".en__field--NOT_TAGGED_42");
+        $(".en__field--NOT_TAGGED_2");
 
 
     addressField
