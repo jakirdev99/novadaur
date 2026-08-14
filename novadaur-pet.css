@@ -121,10 +121,26 @@ height: 60px;
    border: 1px solid #7324A6 !important;
 }
 
-.en__field--16721 .en__field__label {
-    position: static;
-    font-size: inherit;
+/* Reset checkbox and radio labels */
+.en__field--checkbox .en__field__label,
+.en__field--radio .en__field__label {
+    position: static !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    font-size: 14px !important;
+    transition: none !important;
+    width: auto !important;
     pointer-events: auto;
+}
+.en__field--checkbox .en__field__item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.en__field--checkbox .en__field__input {
+    margin-top: 3px;
 }
 
 /* ------------------------------------------------------------
