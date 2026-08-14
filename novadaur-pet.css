@@ -117,7 +117,8 @@ height: 60px;
   background-color: #ffffff !important;
 }
 .en__component--formblock .en__field__input:focus {
-   border: 1px solid #7324A6;
+   outline: none;
+   border: 1px solid #7324A6 !important;
 }
 
 .en__field--16721 .en__field__item input[type="checkbox"] {
