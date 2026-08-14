@@ -116,6 +116,9 @@ height: 60px;
   box-sizing: border-box !important;
   background-color: #ffffff !important;
 }
+.en__component--formblock .en__field__input:focus {
+   border: 1px solid #7324A6;
+}
 
 .en__field--16721 .en__field__item input[type="checkbox"] {
   display: inline-block;
