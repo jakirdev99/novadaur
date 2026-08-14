@@ -723,7 +723,6 @@ async function mySubmitFunction() {
 
       setTimeout(function () {
         if ($(".en__field--validationFailed").length > 0) {
-          formValidator();
           console.log("Validation failed in form:", currentId);
         } else {
           setTimeout(function () {
@@ -749,7 +748,6 @@ async function mySubmitFunction() {
       await collectAndPushFormData1();
       setTimeout(function () {
         if ($(".en__field--validationFailed").length > 0) {
-          formValidator();
           console.log("Validation failed in form:", currentId);
         } else {
           setTimeout(function () {
