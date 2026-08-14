@@ -15,7 +15,7 @@
 }
 
 /* ------------------------------------------------------------
-   1. GLOBAL RESET & COLLAPSE EMPTY BANNER ROWS
+   1. GLOBAL RESET
    ------------------------------------------------------------ */
 html,
 body {
@@ -314,48 +314,47 @@ label.popup-btn:hover {
    7. RESPONSIVE BREAKPOINT
    ------------------------------------------------------------ */
 @media (max-width: 992px) {
-      header img {
-      width: 6rem;
-   }
-   header .overlay {
-      height: 250px;
-   }
-   
-    #popup:checked ~ header .overlay {
-      height: 100px;
-      background: #151F28 !important;
-       opacity: 1;
-    }
+  header img {
+    width: 6rem;
+  }
+  header .overlay {
+    height: 250px;
+  }
 
-   #popup:checked ~ header img {
+  #popup:checked ~ header .overlay {
+    height: 100px;
+    background: #151f28 !important;
+    opacity: 1;
+  }
 
+  #popup:checked ~ header img {
     filter: brightness(0) invert(1);
-}
-   #popup:checked ~ label.popup-btn span {
-        display: none;
-    }
-   #popup:checked ~ main .ndpet-content {
-      display: none;
-   }
-   #popup:checked ~ main .sub-content {
-      margin-top: 0;
-      margin-bottom: 0;
-   }
+  }
+  #popup:checked ~ label.popup-btn span {
+    display: none;
+  }
+  #popup:checked ~ main .ndpet-content {
+    display: none;
+  }
+  #popup:checked ~ main .sub-content {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
 }
 
 @media (max-width: 992px) {
-   #popup:checked ~ label.popup-btn {
-        width: 50px;
-        height: 50px;
-        bottom: auto;
-        top: 20px;
-        left: auto;
-        right: 20px;
-        cursor: pointer;
-        background: none;
-        position: absolute;
-        overflow: hidden;
-    }
+  #popup:checked ~ label.popup-btn {
+    width: 50px;
+    height: 50px;
+    bottom: auto;
+    top: 20px;
+    left: auto;
+    right: 20px;
+    cursor: pointer;
+    background: none;
+    position: absolute;
+    overflow: hidden;
+  }
   #popup:checked ~ label.popup-btn:before {
     content: "+";
     display: block;
@@ -369,15 +368,15 @@ label.popup-btn:hover {
     color: #fff;
   }
 
-#main-content .sub-content {
-  max-width: 100%;
-}
-   #main-content .ndpet-form {
-      display:none;
-   }
+  #main-content .sub-content {
+    max-width: 100%;
+  }
+  #main-content .ndpet-form {
+    display: none;
+  }
   #main-content .ndpet-form.show {
-   display: block;
-   margin-top: 0px;
-  border-radius: 0px;
+    display: block;
+    margin-top: 0px;
+    border-radius: 0px;
   }
 }
