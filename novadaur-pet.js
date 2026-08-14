@@ -27,180 +27,110 @@ $(document).ready(function () {
 
 });
 
-// :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::keyup scripts::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
-// :::::: Keyup function to remove error msg when enter Values :::::: //
+/* ============================================================ FORM INTERACTION HANDLING ============================================================ */
 
 $(document).ready(function () {
-  //  ::::::Block to remove hold:::::::: //
 
-  window.addEventListener("pageshow", function (event) {
-    var pathArray = window.location.pathname.split("/").filter(Boolean);
-    console.log("Patharray_3:", pathArray);
-    var currentId = pathArray[pathArray.length - 1];
-    console.log("CurrentId in backbtn", currentId);
+  // Remove form state issues when using browser back button
+  window.addEventListener("pageshow", function () {
+    const pathArray = window.location.pathname.split("/").filter(Boolean);
+    const currentStep = pathArray[pathArray.length - 1];
 
-    if (currentId == "1" || currentId == "2" || currentId == "3") {
+    if (["1", "2", "3"].includes(currentStep)) {
       $("#form_4").remove();
       $(".en__component.en__component--formblock").show();
-      //   $(".en__component.en__component--formblock").css("display", "block");
-      console.log(`Current Page is ${currentId} :::::::::;::::::`);
     }
   });
 
-  // First Name
 
-  $("#en__field_supporter_firstName").on("keyup", function () {
-    var value = $(this).val().trim();
+  // Remove validation error for text fields
+  function clearFieldError(inputSelector, fieldSelector) {
+    $(inputSelector).on("keyup", function () {
+      if ($(this).val().trim() !== "") {
+        $(fieldSelector)
+          .find(".en__field__error")
+          .hide();
 
-    if (value !== "") {
-      // Hide the error message
-      $(".en__field--firstName .en__field__error").hide();
-
-      // Remove the validation error class
-      $(".en__field--firstName ").removeClass("en__field--validationFailed");
-
-      console.log("First Name field has data. Validation error removed.");
-    }
-  });
-
-  // Last Name
-  $("#en__field_supporter_lastName").on("keyup", function () {
-    var value = $(this).val().trim();
-
-    if (value !== "") {
-      // Hide the error message
-      $(".en__field--lastName .en__field__error").hide();
-
-      // Remove the validation error class
-      $(".en__field--lastName").removeClass("en__field--validationFailed");
-
-      console.log("Last Name field has data. Validation error removed.");
-    }
-  });
-
-  // Address
-  $("#en__field_supporter_NOT_TAGGED_42").on("keyup", function () {
-    var value = $(this).val().trim();
-
-    if (value !== "") {
-      // Hide the error message
-      $(".en__field--NOT_TAGGED_42 .en__field__error").hide();
-
-      // Remove the validation error class
-      $(".en__field--NOT_TAGGED_42").removeClass("en__field--validationFailed");
-
-      console.log("Address field has data. Validation error removed.");
-    }
-  });
-
-  // Phone Number
-  $("#en__field_supporter_phoneNumber2").on("keyup", function () {
-    var value = $(this).val().trim();
-
-    if (value !== "") {
-      // Hide the error message
-      $(".en__field--phoneNumber2 .en__field__error").hide();
-
-      // Remove the validation error class
-      $(".en__field--phoneNumber2").removeClass("en__field--validationFailed");
-
-      console.log("Phone Number field has data. Validation error removed.");
-    }
-  });
-
-  // email address
-  $("#en__field_supporter_emailAddress").on("keyup", function () {
-    var value = $(this).val().trim();
-
-    if (value !== "") {
-      // Hide the error message
-      $(".en__field--emailAddress .en__field__error").hide();
-
-      // Remove the validation error class
-      $(".en__field--emailAddress").removeClass("en__field--validationFailed");
-
-      console.log("Email Address field has data. Validation error removed.");
-    }
-  });
-
-  // dropdown1
-  function clearError1() {
-    var value = $("#en__field_supporter_questions_2103481").val();
-
-    if (value === "0" || value === "1") {
-      var $field = $("#en__field_supporter_questions_2103481").closest(
-        ".en__field",
-      );
-
-      $field.find(".en__field__error").remove();
-
-      $field.removeClass("en__field--validationFailed");
-    }
+        $(fieldSelector)
+          .removeClass("en__field--validationFailed");
+      }
+    });
   }
 
-  $("#en__field_supporter_questions_2103481").on("change", clearError1);
 
-  $(".en__field--2103481").on(
-    "click",
-    ".select-items div, .select-selected",
-    function () {
-      setTimeout(clearError1, 10);
-    },
+  // Text fields
+  clearFieldError(
+    "#en__field_supporter_firstName",
+    ".en__field--firstName"
   );
 
-  // dropdown2
-  function clearError2() {
-    var value = $("#en__field_supporter_questions_2103495").val();
+  clearFieldError(
+    "#en__field_supporter_lastName",
+    ".en__field--lastName"
+  );
 
-    if (value === "0" || value === "1") {
-      var $field = $("#en__field_supporter_questions_2103495").closest(
-        ".en__field",
-      );
+  clearFieldError(
+    "#en__field_supporter_NOT_TAGGED_42",
+    ".en__field--NOT_TAGGED_42"
+  );
 
-      $field.find(".en__field__error").remove();
+  clearFieldError(
+    "#en__field_supporter_phoneNumber2",
+    ".en__field--phoneNumber2"
+  );
 
-      $field.removeClass("en__field--validationFailed");
+  clearFieldError(
+    "#en__field_supporter_emailAddress",
+    ".en__field--emailAddress"
+  );
+
+
+  // Remove validation error for dropdowns
+  function clearDropdownError(selectSelector, fieldClass) {
+
+    function clearError() {
+      const value = $(selectSelector).val();
+
+      if (value === "0" || value === "1") {
+        const field = $(selectSelector).closest(".en__field");
+
+        field.find(".en__field__error").remove();
+        field.removeClass("en__field--validationFailed");
+      }
     }
+
+
+    $(selectSelector).on("change", clearError);
+
+    $(fieldClass).on(
+      "click",
+      ".select-items div, .select-selected",
+      function () {
+        setTimeout(clearError, 10);
+      }
+    );
   }
 
-  $("#en__field_supporter_questions_2103495").on("change", clearError2);
 
-  $(".en__field--2103495").on(
-    "click",
-    ".select-items div, .select-selected",
-    function () {
-      setTimeout(clearError2, 10);
-    },
+  // Dropdown fields
+  clearDropdownError(
+    "#en__field_supporter_questions_2103481",
+    ".en__field--2103481"
   );
 
-  // dropdown3
-  function clearError3() {
-    var value = $("#en__field_supporter_questions_2103496").val();
-
-    if (value === "0" || value === "1") {
-      var $field = $("#en__field_supporter_questions_2103496").closest(
-        ".en__field",
-      );
-
-      $field.find(".en__field__error").remove();
-
-      $field.removeClass("en__field--validationFailed");
-    }
-  }
-
-  $("#en__field_supporter_questions_2103496").on("change", clearError3);
-
-  $(".en__field--2103496").on(
-    "click",
-    ".select-items div, .select-selected",
-    function () {
-      setTimeout(clearError3, 10);
-    },
+  clearDropdownError(
+    "#en__field_supporter_questions_2103495",
+    ".en__field--2103495"
   );
+
+  clearDropdownError(
+    "#en__field_supporter_questions_2103496",
+    ".en__field--2103496"
+  );
+
 });
 
-//   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+/* ============================================================ x ============================================================ */
 
 $(document).ready(function () {
   initCustomDropdowns();
