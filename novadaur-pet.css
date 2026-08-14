@@ -323,7 +323,6 @@ label.popup-btn:hover {
     }
    #popup:checked ~ main .ndpet-content {
       display: none;
-      opacity: 0;
    }
    #popup:checked ~ main .sub-content {
       margin-top: 0;
