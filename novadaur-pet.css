@@ -137,16 +137,30 @@ input#popup {
 .en__field {
   position: relative;
 }
-.en__field label {
-  position: absolute;
-  transition: all 0.2s ease;
+
+/* ------------------------------------------------------------
+   5. FORM INPUTS FLOAT LABELS
+   ------------------------------------------------------------ */
+.en__field--emailAddress.populated .en__field__label,.en__field--text.populated .en__field__label,.en__field--select .en__field__label, .en__field--telephone.populated .en__field__label { top: 8px; left: 8px; font-size: 12px; }
+.en__field--number.populated .en__field__label { top: 8px; left: 8px; font-size: 12px; }
+
+#main-content .en__field--splitselect .en__field__label, #main-content .en__field--radio .en__field__label, #main-content .en__field--select .en__field__label, #main-content .populated.en__field .en__field__label { font-size: 15px; top: 4px; font-weight: 500 !important; left: 0; width: 100%;}
+
+.en__field--textarea.populated .en__field__label, .en__field--emailAddress.populated .en__field__label,.en__field--text.populated .en__field__label,.en__field--select .en__field__label, .en__field--telephone.populated .en__field__label { top: 8px; left: 8px; font-size: 12px; }
+
+.wrapper #main-content .en__field--splitselect .en__field__label, #main-content .en__field--radio .en__field__label, #main-content .en__field--select .en__field__label, #main-content .populated.en__field .en__field__label { font-size: 15px; top: -5px; font-weight: 800 !important; left: 0; }
+
+#main-content  .en__field--recurrpay > .en__field__label, #main-content .en__field--select .en__field__label, #main-content .populated.en__field .en__field__label { font-size: 11px; top: 16px; font-weight: 500 !important; }
+
+#main-content .populated.en__field .en__field__label {
+    left: 10px;
+    width: 100%;
 }
 
-.en__field.focused label,
-.en__field.populated label {
-  transform: translateY(-20px);
-  font-size: 12px;
+.en__field.en__field--number.en__field--2103829.en__field--NOT_TAGGED_79.populated {
+    display: none;
 }
+
 
 
 /* ------------------------------------------------------------
