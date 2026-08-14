@@ -236,7 +236,6 @@ footer {
    7. MOBILE POPUP BUTTON
    ------------------------------------------------------------ */
 label.popup-btn {
-   display: none;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   padding: 6px 0;
@@ -244,7 +243,7 @@ label.popup-btn {
   bottom: 0;
   left: 0;
   z-index: 99;
-  display: block;
+  display: none;
   cursor: pointer;
 }
 label.popup-btn span {
