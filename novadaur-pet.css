@@ -143,6 +143,13 @@ height: 60px;
    width: auto;
    height: auto;
 }
+.en__field--NOT_TAGGED_2 label {
+   margin-left: 22px;
+}
+.en__field--16721 {
+   font-size: 14px;
+}
+
 #google-address-autocomplete {
    border: 1px solid #e2d9f0 !important;
    border-radius: 8px !important;
