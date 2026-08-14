@@ -139,32 +139,34 @@ input#popup {
 }
 
 /* ------------------------------------------------------------
-   5. FORM INPUTS FLOAT LABELS
+   5. FORM FLOAT LABELS
    ------------------------------------------------------------ */
 .en__field {
     position: relative;
-    margin-bottom: 20px;
+    padding-top: 10px;
 }
+
 .en__field__label {
     position: absolute;
+    top: 30px;
     left: 14px;
-    top: 22px;
-    font-size: 16px;
+    font-size: 15px;
     color: #000;
     transition: all .25s ease;
     pointer-events: none;
-    z-index: 2;
+    z-index: 5;
 }
+
 .en__field__input {
-    height: 60px;
-    padding: 24px 14px 8px;
-    width: 100%;
+    height: 55px;
+    padding: 22px 14px 8px;
 }
+
+
 /* Floating state */
-.en__field.populated .en__field__label,
-.en__field:focus-within .en__field__label {
+.en__field.populated .en__field__label {
     top: 8px;
-    font-size: 12px;
+    font-size: 11px;
 }
 
 /* ------------------------------------------------------------
