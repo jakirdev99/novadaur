@@ -144,6 +144,19 @@ height: 60px;
    height: auto;
 }
 
+.en__field__error {
+    position: absolute;
+    top: calc(100% - 11px);
+    left: 0;
+    width: 100%;
+    font-size: 12px;
+    font-weight: 600;
+    color: #f00;
+    margin: 0;
+    line-height: 14px;
+    z-index: 20;
+}
+
 /* ------------------------------------------------------------
    5. FORM FLOAT LABELS
    ------------------------------------------------------------ */
