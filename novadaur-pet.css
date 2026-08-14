@@ -314,16 +314,21 @@ label.popup-btn:hover {
    7. RESPONSIVE BREAKPOINT
    ------------------------------------------------------------ */
 @media (max-width: 992px) {
+      header img {
+      width: 6rem;
+   }
    header .overlay {
       height: 250px;
    }
+   
     #popup:checked ~ header .overlay {
       height: 100px;
       background: #151F28 !important;
        opacity: 1;
     }
+
    #popup:checked ~ header img {
-    width: 6rem;
+
     filter: brightness(0) invert(1);
 }
    #popup:checked ~ label.popup-btn span {
