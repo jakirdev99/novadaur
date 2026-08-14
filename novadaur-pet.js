@@ -132,6 +132,7 @@ $(document).ready(function () {
 /* ============================================================ from UI enhancements, custom dropdowns, floating labels and address autocomplete ============================================================ */
 $(document).ready(function () {
   initFloatLabels();
+  initAddressAutocomplete();
 });
 
 // add floating label behavior
