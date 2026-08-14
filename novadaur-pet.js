@@ -44,7 +44,6 @@ $(document).ready(function () {
     }
   });
 
-
   // remove validation error for text fields
   function clearFieldError(inputSelector, fieldSelector) {
     $(inputSelector).on("keyup", function () {
@@ -58,7 +57,6 @@ $(document).ready(function () {
       }
     });
   }
-
 
   // text fields
   clearFieldError(
@@ -86,7 +84,6 @@ $(document).ready(function () {
     ".en__field--emailAddress"
   );
 
-
   // remove validation error for dropdowns
   function clearDropdownError(selectSelector, fieldClass) {
 
@@ -101,7 +98,6 @@ $(document).ready(function () {
       }
     }
 
-
     $(selectSelector).on("change", clearError);
 
     $(fieldClass).on(
@@ -112,7 +108,6 @@ $(document).ready(function () {
       }
     );
   }
-
 
   // dropdown fields
   clearDropdownError(
@@ -134,6 +129,7 @@ $(document).ready(function () {
 
 /* ============================================================ x ============================================================ */
 
+/* ============================================================ from UI enhancements, custom dropdowns, floating labels and address autocomplete ============================================================ */
 $(document).ready(function () {
 
   initCustomDropdowns();
@@ -142,11 +138,7 @@ $(document).ready(function () {
 
 });
 
-
-/* ============================================================
-   CUSTOM DROPDOWN
-   Replace default EN select with custom dropdown UI
-   ============================================================ */
+// custom dropdown, replace default EN select with custom dropdown UI
 
 function initCustomDropdowns() {
 
