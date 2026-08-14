@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const nextButton = document.getElementById("popup");
-  const fromContainer= document.querySelector(".ndpet-form");
+  const fromContainer = document.querySelector(".ndpet-form");
 
 function toggleFormBlock() {
   if (window.innerWidth < 993) {
@@ -15,15 +15,15 @@ function toggleFormBlock() {
   var currentId = Number(pathArray[pathArray.length - 1]); // convert to number
 
   if (currentId > 1) {
-    checkbox.checked = true;
-    console.log("Checkbox is now checked because currentId > 1");
+    nextButton.checked = true;
+    console.log("Next button is now checked because currentId > 1");
   }
 
   // Run once on load
   toggleFormBlock();
 
-  // Listen for checkbox toggle
-  checkbox.addEventListener("change", toggleFormBlock);
+  // Listen for next button toggle
+  nextButton.addEventListener("change", toggleFormBlock);
 
   // Also handle screen resize
   window.addEventListener("resize", toggleFormBlock);
