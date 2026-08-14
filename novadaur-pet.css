@@ -366,6 +366,9 @@ label.popup-btn:hover {
   opacity: 0;
   visibility: hidden;
   transition: opacity 1s ease;
+ height: 0;
+margin: 0;
+padding: 0;
 }
 #main-content .sub-content .ndpet-form.show {
   opacity: 1;
