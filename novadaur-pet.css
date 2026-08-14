@@ -193,7 +193,7 @@ height: 60px;
 }
 
 .en__field--16721 label {
-   font-size: 14px;
+   font-size: 14px !important;
 }
 
 /* ------------------------------------------------------------
