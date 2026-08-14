@@ -367,7 +367,7 @@ label.popup-btn:hover {
   visibility: hidden;
   transition: opacity 0.3s ease;
 }
-.ndpet-form.show {
+#main-content .sub-content .ndpet-form.show {
   opacity: 1;
   visibility: visible;
 }
