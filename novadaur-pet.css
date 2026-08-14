@@ -140,7 +140,8 @@ height: 60px;
 }
 
 .en__field--checkbox .en__field__input {
-    margin-top: 3px;
+   width: 30px;
+   height: 30px;
 }
 
 /* ------------------------------------------------------------
