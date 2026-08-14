@@ -143,10 +143,10 @@ height: 60px;
    width: auto;
    height: auto;
 }
-.en__field_supporter_NOT_TAGGED_2 {
-   left: 40;
-   top: 12;
+#google-address-autocomplete {
+   border: 1px solid #e2d9f0 !important;
 }
+
 .en__field__error {
     position: absolute;
     top: calc(100% - 11px);
