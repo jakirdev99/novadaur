@@ -152,43 +152,71 @@ function initFloatLabels() {
 }
 
 //********************** google address autocomplete **********************//
-function initAddressAutocomplete() {
+async function initAddressAutocomplete() {
 
-    const addressInput = document.getElementById(
+    const addressField = document.getElementById(
         "en__field_supporter_NOT_TAGGED_2"
     );
 
-    if (!addressInput) {
+    if (!addressField) {
         return;
     }
 
-    const autocomplete = new google.maps.places.Autocomplete(
-        addressInput,
-        {
-            types: ["address"],
-            componentRestrictions: {
-                country: "us"
-            },
-            fields: ["address_components"]
-        }
+    const { PlaceAutocompleteElement } =
+        await google.maps.importLibrary("places");
+
+
+    const autocomplete = new PlaceAutocompleteElement({
+        includedRegionCodes: ["us"],
+        includedPrimaryTypes: ["street_address"]
+    });
+
+
+    autocomplete.id = "google-address-autocomplete";
+
+
+    /*
+     * Put Google autocomplete in the existing EN address field
+     */
+    addressField.parentNode.insertBefore(
+        autocomplete,
+        addressField
     );
 
-    autocomplete.addListener("place_changed", function () {
 
-        const place = autocomplete.getPlace();
+    /*
+     * Hide the original EN input
+     */
+    addressField.style.display = "none";
 
-        if (!place.address_components) {
-            return;
+
+    /*
+     * User selects an address
+     */
+    autocomplete.addEventListener(
+        "gmp-select",
+        async function (event) {
+
+            const place =
+                event.placePrediction.toPlace();
+
+
+            await place.fetchFields({
+                fields: [
+                    "addressComponents",
+                    "formattedAddress"
+                ]
+            });
+
+
+            fillAddressFields(
+                place.addressComponents
+            );
+
         }
-
-        fillAddressFields(place.address_components);
-    });
+    );
 }
 
-
-/* ============================================================
-   FILL ADDRESS FIELDS
-   ============================================================ */
 
 function fillAddressFields(components) {
 
@@ -196,98 +224,98 @@ function fillAddressFields(components) {
     let city = "";
     let state = "";
     let stateCode = "";
-    let zipCode = "";
+    let postcode = "";
     let country = "";
     let countryCode = "";
 
+
     components.forEach(function (component) {
 
-        const types = component.types;
+        const type = component.types[0];
 
-        if (types.includes("street_number")) {
-            address1 = component.long_name + " ";
+
+        switch (type) {
+
+            case "street_number":
+                address1 = component.longText + " ";
+                break;
+
+
+            case "route":
+                address1 += component.longText;
+                break;
+
+
+            case "locality":
+            case "postal_town":
+                city = component.longText;
+                break;
+
+
+            case "administrative_area_level_1":
+                state = component.longText;
+                stateCode = component.shortText;
+                break;
+
+
+            case "postal_code":
+                postcode = component.longText;
+                break;
+
+
+            case "country":
+                country = component.longText;
+                countryCode = component.shortText;
+                break;
+
         }
 
-        if (types.includes("route")) {
-            address1 += component.long_name;
-        }
-
-        if (types.includes("locality")) {
-            city = component.long_name;
-        }
-
-        if (types.includes("administrative_area_level_1")) {
-            state = component.long_name;
-            stateCode = component.short_name;
-        }
-
-        if (types.includes("postal_code")) {
-            zipCode = component.long_name;
-        }
-
-        if (types.includes("country")) {
-            country = component.long_name;
-            countryCode = component.short_name;
-        }
     });
 
 
-    /* Address 1 */
-    setInputValue(
+    setField(
         "#en__field_supporter_address1",
         address1.trim()
     );
 
 
-    /* City */
-    setInputValue(
+    setField(
         "#en__field_supporter_city",
         city
     );
 
 
-    /* State */
-    setSelectValue(
+    setField(
+        "#en__field_supporter_postcode",
+        postcode
+    );
+
+
+    setSelect(
         "#en__field_supporter_region",
         state,
         stateCode
     );
 
 
-    /* ZIP Code */
-    setInputValue(
-        "#en__field_supporter_postcode",
-        zipCode
-    );
-
-
-    /* Country */
-    setSelectValue(
+    setSelect(
         "#en__field_supporter_country",
         country,
         countryCode
     );
 }
 
-
-/* ============================================================
-   INPUT FIELD HELPER
-   ============================================================ */
-
-function setInputValue(selector, value) {
+function setField(selector, value) {
 
     $(selector)
         .val(value)
         .trigger("input")
         .trigger("change");
+
 }
 
 
-/* ============================================================
-   SELECT FIELD HELPER
-   ============================================================ */
-
-function setSelectValue(selector, label, value) {
+function setSelect(selector, label, value) {
 
     const select = $(selector);
 
@@ -295,45 +323,50 @@ function setSelectValue(selector, label, value) {
         return;
     }
 
-    let matched = false;
 
-    /* Try option value first */
-    select.find("option").each(function () {
+    const option = select.find("option").filter(function () {
 
-        if (
+        return (
             this.value === value ||
             this.value === label ||
             $(this).text().trim() === label
-        ) {
-            select.val(this.value);
-            matched = true;
-            return false;
-        }
-    });
+        );
+
+    }).first();
 
 
-    if (matched) {
-        select.trigger("change");
+    if (option.length) {
+
+        select
+            .val(option.val())
+            .trigger("change");
+
     }
 
 
-    /* Update your custom dropdown UI */
+    /*
+     * Update your existing custom dropdown
+     */
     const field = select.closest(".en__field");
+
 
     field
         .find(".select-selected")
         .text(label);
 
+
     field
         .find(".select-items div")
         .removeClass("same-as-selected");
 
+
     field
         .find(".select-items div")
         .filter(function () {
+
             return $(this).text().trim() === label;
+
         })
         .first()
         .addClass("same-as-selected");
 }
-
