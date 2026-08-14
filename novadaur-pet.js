@@ -2,21 +2,13 @@ $(document).ready(function () {
   const checkbox = document.getElementById("popup");
   const formBlock = document.querySelector(".ndpet-form");
 
-  function toggleFormBlock() {
-    if (window.innerWidth < 993) {
-      // only apply below 993px
-      if (checkbox.checked) {
-        formBlock.style.display = "block";
-        opacity: 1;
-      } else {
-        formBlock.style.display = "none";
-        fromBlock.style.opacity: 0;
-      }
-    } else {
-      // Optional: reset when screen is larger
-      formBlock.style.display = "";
-    }
+function toggleFormBlock() {
+  if (window.innerWidth < 993) {
+    formBlock.classList.toggle("show", checkbox.checked);
+  } else {
+    formBlock.classList.add("show");
   }
+}
 
   // Initial logs
   console.log("Initially checked:", checkbox.checked);
