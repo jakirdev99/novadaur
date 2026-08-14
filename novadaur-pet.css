@@ -146,6 +146,7 @@ height: 60px;
 #google-address-autocomplete {
    border: 1px solid #e2d9f0 !important;
    border-radius: 8px !important;
+   height: 60px;
 }
 
 .en__field__error {
