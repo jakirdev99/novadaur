@@ -149,8 +149,8 @@ input#popup {
 
 .en__field__label {
     position: absolute;
-    left: 14px;
-    top: 22px;
+    left: 15px;
+    top: 18px;
     font-size: 16px;
     color: #000;
     transition: all .25s ease;
@@ -169,8 +169,8 @@ input#popup {
 /* Floating state */
 .en__field.populated .en__field__label,
 .en__field:focus-within .en__field__label {
-    top: 8px;
-    font-size: 12px;
+    top: 0px;
+    font-size: 12px !important;
 }
 
 /* ------------------------------------------------------------
