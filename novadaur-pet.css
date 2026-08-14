@@ -320,6 +320,9 @@ label.popup-btn:hover {
   header .overlay {
     height: 250px;
   }
+   #main-content .ndpet-content, #main-content .ndpet-form{
+      
+   }
 
   #popup:checked ~ header .overlay {
     height: 100px;
@@ -373,6 +376,7 @@ label.popup-btn:hover {
 
   #main-content .sub-content {
     max-width: 100%;
+     display: block;
   }
   #main-content .ndpet-form {
     display: none;
