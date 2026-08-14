@@ -107,7 +107,8 @@ input#popup {
 }
 .en__component--formblock .en__field__input {
   width: 100%;
-  padding: 12px 14px !important;
+height: 60px;
+  padding: 24px 14px 8px;
   border: 1px solid #e2d9f0 !important;
   border-radius: 8px !important;
   font-family: var(--ndpet-font-body) !important;
@@ -132,20 +133,13 @@ input#popup {
   gap: 10px;
 }
 
-#main-content .en__component--row--2,
-.en__field--select,
-.en__field {
-  position: relative;
-}
 
 /* ------------------------------------------------------------
    5. FORM FLOAT LABELS
    ------------------------------------------------------------ */
 .en__field {
     position: relative;
-    margin-bottom: 20px;
 }
-
 
 .en__field__label {
     position: absolute;
@@ -157,14 +151,6 @@ input#popup {
     pointer-events: none;
     z-index: 2;
 }
-
-
-.en__field__input {
-    height: 60px;
-    padding: 24px 14px 8px;
-    width: 100%;
-}
-
 
 /* Floating state */
 .en__field.populated .en__field__label,
