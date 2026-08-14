@@ -7,8 +7,10 @@ $(document).ready(function () {
       // only apply below 993px
       if (checkbox.checked) {
         formBlock.style.display = "block";
+        opacity: 1;
       } else {
         formBlock.style.display = "none";
+        fromBlock.style.opacity: 0;
       }
     } else {
       // Optional: reset when screen is larger
