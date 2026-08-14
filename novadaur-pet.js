@@ -1,3 +1,4 @@
+/* ============================================================ POPUP INTERACTION ============================================================ */
 $(document).ready(function () {
 
   const nextButton = document.getElementById("popup");
