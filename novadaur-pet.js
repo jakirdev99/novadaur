@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const nextButton = document.getElementById("popup");
-  const  fromContainer= document.querySelector(".ndpet-form");
+  const fromContainer= document.querySelector(".ndpet-form");
 
 function toggleFormBlock() {
   if (window.innerWidth < 993) {
