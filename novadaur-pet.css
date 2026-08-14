@@ -121,23 +121,6 @@ height: 60px;
    border: 1px solid #7324A6 !important;
 }
 
-.en__field--16721 .en__field__item input[type="checkbox"] {
-  display: inline-block;
-  width: 35px;
-  height: 20px;
-  margin: 0;
-}
-.en__field--16721 .en__field__item label {
-  display: inline-block !important;
-}
-.en__field--16721 .en__field__item {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 10px;
-}
-
-
 /* ------------------------------------------------------------
    5. FORM FLOAT LABELS
    ------------------------------------------------------------ */
