@@ -1,4 +1,4 @@
-/* ============================================================ POPUP INTERACTION ============================================================ */
+/* ============================================================ popup interaction ============================================================ */
 $(document).ready(function () {
 
   const nextButton = document.getElementById("popup");
@@ -29,11 +29,11 @@ $(document).ready(function () {
 });
 /* ============================================================ x ============================================================ */
 
-/* ============================================================ FORM INTERACTION HANDLING ============================================================ */
+/* ============================================================ form interaction handling ============================================================ */
 
 $(document).ready(function () {
 
-  // Remove form state issues when using browser back button
+  // remove form state issues when using browser back button
   window.addEventListener("pageshow", function () {
     const pathArray = window.location.pathname.split("/").filter(Boolean);
     const currentStep = pathArray[pathArray.length - 1];
@@ -45,7 +45,7 @@ $(document).ready(function () {
   });
 
 
-  // Remove validation error for text fields
+  // remove validation error for text fields
   function clearFieldError(inputSelector, fieldSelector) {
     $(inputSelector).on("keyup", function () {
       if ($(this).val().trim() !== "") {
@@ -60,7 +60,7 @@ $(document).ready(function () {
   }
 
 
-  // Text fields
+  // text fields
   clearFieldError(
     "#en__field_supporter_firstName",
     ".en__field--firstName"
@@ -87,7 +87,7 @@ $(document).ready(function () {
   );
 
 
-  // Remove validation error for dropdowns
+  // remove validation error for dropdowns
   function clearDropdownError(selectSelector, fieldClass) {
 
     function clearError() {
@@ -114,7 +114,7 @@ $(document).ready(function () {
   }
 
 
-  // Dropdown fields
+  // dropdown fields
   clearDropdownError(
     "#en__field_supporter_questions_2103481",
     ".en__field--2103481"
