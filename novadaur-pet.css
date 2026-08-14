@@ -316,7 +316,8 @@ label.popup-btn:hover {
 @media (max-width: 992px) {
     #popup:checked ~ header .overlay {
       height: 100px;
-      background: #000 !important;
+      background: #151F28 !important;
+       opacity: 1;
     }
    #popup:checked ~ header img {
     width: 6rem;
