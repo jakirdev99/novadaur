@@ -327,6 +327,7 @@ label.popup-btn:hover {
    }
    #popup:checked ~ main .sub-content {
       margin-top: 0;
+      margin-bottom: 0;
    }
 }
 
