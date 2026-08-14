@@ -319,6 +319,15 @@ label.popup-btn:hover {
       height: 100px;
       background: #000 !important;
     }
+   #popup:checked ~ label.popup-btn span {
+        display: none;
+    }
+   #popup:checked ~ .ndpet-content {
+      display: none;
+   }
+   #popup:checked ~ .sub-content {
+      margin-top: 0;
+   }
 }
 
 @media (min-width: 993px) {
@@ -326,9 +335,7 @@ label.popup-btn:hover {
     display: none !important;
   }
 }
-#popup:checked ~ label.popup-btn span {
-        display: none;
-    }
+
 @media (max-width: 992px) {
    #popup:checked ~ label.popup-btn {
         width: 50px;
