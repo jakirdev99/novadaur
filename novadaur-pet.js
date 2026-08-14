@@ -261,63 +261,33 @@ function syncDropdowns() {
 }
 
 
-
-
-
-/* ============================================================
-   FLOAT LABELS
-   Add floating label behavior
-   ============================================================ */
+// add floating label behavior
 
 function initFloatLabels() {
 
+    $(".en__field").each(function () {
 
-  $(".en__field--text, .en__field--number, .en__field--emailAddress, .en__field--telephone")
-    .each(function () {
-
-
-      const field = $(this);
-      const input = field.find("input, textarea");
+        const field = $(this);
+        const input = field.find(".en__field__input");
 
 
-      if (input.val()) {
-        field.addClass("populated");
-      }
-
-
-      input.on("focus", function () {
-
-        field.addClass("focused");
-
-      });
-
-
-      input.on("blur", function () {
-
-        field.removeClass("focused");
-
-
-        if (!input.val()) {
-          field.removeClass("populated");
+        function checkValue() {
+            field.toggleClass(
+                "populated",
+                input.val().trim() !== ""
+            );
         }
 
-      });
 
+        checkValue();
 
-      input.on("keyup", function () {
-
-        field.addClass("populated");
-
-      });
-
+        input.on("keyup change", checkValue);
 
     });
 
 }
 
-
-
-
+initFloatLabels();
 
 /* ============================================================
    ADDRESS AUTOCOMPLETE
