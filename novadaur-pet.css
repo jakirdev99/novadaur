@@ -331,14 +331,6 @@ label.popup-btn:hover {
    }
 }
 
-@media (min-width: 993px) {
-  label.popup-btn {
-    display: none !important;
-    transition: opacity 1s ease;
-    opacity: 0;
-  }
-}
-
 @media (max-width: 992px) {
    #popup:checked ~ label.popup-btn {
         width: 50px;
@@ -368,8 +360,16 @@ label.popup-btn:hover {
 #main-content .sub-content {
   max-width: 100%;
 }
+   
 #main-content .sub-content .ndpet-form {
   margin-top: 0px;
   border-radius: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+.ndpet-form.show {
+  opacity: 1;
+  visibility: visible;
 }
 }
